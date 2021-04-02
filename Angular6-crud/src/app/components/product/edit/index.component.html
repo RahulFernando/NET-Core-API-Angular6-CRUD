@@ -1,0 +1,23 @@
+<div class="container">
+    <h3>Edit Product</h3>
+
+<form [formGroup]="productForm" (ngSubmit)="save()">
+    <div class="form-group">
+      <label>Id</label>
+      <input type="text" class="form-control" readonly placeholder="Enter id" formControlName="id" required>
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" placeholder="Enter name" formControlName="name" required>
+    </div>
+    <div class="form-group">
+      <label>Price</label>
+      <input type="number" min="0" class="form-control" placeholder="Price" formControlName="price" required>
+    </div>
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="number" min="0" class="form-control" placeholder="Quantity" formControlName="quantity" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+</div>
